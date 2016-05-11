@@ -1,0 +1,354 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/relativeLayout">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checking..."
+        android:id="@+id/startLoggerButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:enabled="true"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Overview"
+        android:id="@+id/OverviewLabel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sim1"
+        android:id="@+id/sim1_label"
+        android:textSize="20dp"
+        android:layout_below="@+id/OverviewLabel"
+        android:layout_alignRight="@+id/OverviewLabel"
+        android:layout_alignEnd="@+id/OverviewLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sim2"
+        android:id="@+id/sim2_label"
+        android:layout_alignTop="@+id/sim1_label"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pow"
+        android:id="@+id/sim1_signalStrength"
+        android:layout_below="@+id/sim1_active"
+        android:layout_alignLeft="@+id/sim1_active"
+        android:layout_alignStart="@+id/sim1_active" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pow"
+        android:id="@+id/sim2_signalStrength"
+        android:layout_alignTop="@+id/sim1_signalStrength"
+        android:layout_alignLeft="@+id/sim2_active"
+        android:layout_alignStart="@+id/sim2_active" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="GSM Signal"
+        android:id="@+id/label_gsm"
+        android:layout_below="@+id/sim1_active"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="CdmaDbm"
+        android:id="@+id/label_cdma"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label_gsm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="EvdoDbm"
+        android:id="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label_cdma" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="null"
+        android:id="@+id/sim1_cdmaDbm"
+        android:layout_below="@+id/sim1_signalStrength"
+        android:layout_alignLeft="@+id/sim1_signalStrength"
+        android:layout_alignStart="@+id/sim1_signalStrength" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="null"
+        android:id="@+id/sim1_evdoDbm"
+        android:layout_below="@+id/sim1_cdmaDbm"
+        android:layout_alignLeft="@+id/sim1_cdmaDbm"
+        android:layout_alignStart="@+id/sim1_cdmaDbm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="null"
+        android:id="@+id/sim2_cdmaDbm"
+        android:layout_below="@+id/sim2_signalStrength"
+        android:layout_alignLeft="@+id/sim2_signalStrength"
+        android:layout_alignStart="@+id/sim2_signalStrength" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="null"
+        android:id="@+id/sim2_evdoDbm"
+        android:layout_below="@+id/sim2_cdmaDbm"
+        android:layout_alignLeft="@+id/sim2_cdmaDbm"
+        android:layout_alignStart="@+id/sim2_cdmaDbm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Active"
+        android:id="@+id/label_active"
+        android:layout_above="@+id/label_gsm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="no"
+        android:id="@+id/sim1_active"
+        android:layout_below="@+id/sim1_label"
+        android:layout_alignLeft="@+id/sim1_label"
+        android:layout_alignStart="@+id/sim1_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="no"
+        android:id="@+id/sim2_active"
+        android:layout_below="@+id/sim2_label"
+        android:layout_alignLeft="@+id/sim2_label"
+        android:layout_alignStart="@+id/sim2_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Status OK"
+        android:id="@+id/errorText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log timestamp"
+        android:id="@+id/timetampBox"
+        android:checked="true"
+        android:layout_below="@+id/LoggerLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log position"
+        android:id="@+id/coordinatesBox"
+        android:checked="true"
+        android:layout_below="@+id/timetampBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Logger"
+        android:id="@+id/LoggerLabel"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filenameText"
+        android:text="Updating..."
+        android:layout_above="@+id/startLoggerButton"
+        android:layout_alignRight="@+id/startLoggerButton"
+        android:layout_alignEnd="@+id/startLoggerButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/minIntervalField"
+        android:text="100"
+        android:layout_below="@+id/posIntervalField"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/posIntervalField"
+        android:text="1500"
+        android:layout_below="@+id/coordinatesBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/minIntervalField"
+        android:layout_alignEnd="@+id/minIntervalField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Min. log interval"
+        android:id="@+id/textView"
+        android:layout_alignBaseline="@+id/minIntervalField"
+        android:layout_alignBottom="@+id/minIntervalField"
+        android:layout_toRightOf="@+id/minIntervalField"
+        android:layout_toEndOf="@+id/minIntervalField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pos. check interval"
+        android:id="@+id/textView2"
+        android:layout_alignBaseline="@+id/posIntervalField"
+        android:layout_alignBottom="@+id/posIntervalField"
+        android:layout_toRightOf="@+id/posIntervalField"
+        android:layout_toEndOf="@+id/posIntervalField" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/LoggerLabel"
+        android:layout_alignRight="@+id/sim2_label"
+        android:layout_alignEnd="@+id/sim2_label"
+        android:gravity="center">
+
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Latitude:"
+                android:id="@+id/textView5"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="null"
+                android:id="@+id/latitudeText"
+                android:layout_column="4"
+                android:layout_marginLeft="10dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Longitude:"
+                android:id="@+id/textView3"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="null"
+                android:id="@+id/longitudeText"
+                android:layout_column="4"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Altitude:"
+                android:id="@+id/textView4"
+                android:layout_column="2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="null"
+                android:id="@+id/altitudeText"
+                android:layout_column="4"
+                android:layout_marginLeft="10dp" />
+        </TableRow>
+    </TableLayout>
+
+
+
+</RelativeLayout>
