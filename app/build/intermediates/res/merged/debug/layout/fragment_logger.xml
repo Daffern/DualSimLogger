@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checking..."
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:enabled="true"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Status OK"
+        android:id="@+id/textView7"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log timestamp"
+        android:id="@+id/checkBox"
+        android:checked="true"
+        android:layout_below="@+id/LoggerLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log position"
+        android:id="@+id/checkBox2"
+        android:checked="true"
+        android:layout_below="@+id/timetampBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Logger"
+        android:id="@+id/textView8"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="Updating..."
+        android:layout_above="@+id/startLoggerButton"
+        android:layout_alignRight="@+id/startLoggerButton"
+        android:layout_alignEnd="@+id/startLoggerButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:text="100"
+        android:layout_below="@+id/posIntervalField"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView6"
+        android:layout_alignEnd="@+id/textView6" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:text="1500"
+        android:layout_below="@+id/coordinatesBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/minIntervalField"
+        android:layout_alignEnd="@+id/minIntervalField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Min. log interval"
+        android:id="@+id/textView9"
+        android:layout_alignBaseline="@+id/minIntervalField"
+        android:layout_alignBottom="@+id/minIntervalField"
+        android:layout_toRightOf="@+id/minIntervalField"
+        android:layout_toEndOf="@+id/minIntervalField" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Pos. check interval"
+        android:id="@+id/textView10"
+        android:layout_alignBaseline="@+id/posIntervalField"
+        android:layout_alignBottom="@+id/posIntervalField"
+        android:layout_toRightOf="@+id/posIntervalField"
+        android:layout_toEndOf="@+id/posIntervalField" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="This is fragment No.2"
+        android:textStyle="bold" />
+-->
+</LinearLayout><!-- From: file:/D:/Android/Projects/Logger/app/src/main/res/layout/fragment_logger.xml -->
