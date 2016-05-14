@@ -59,6 +59,18 @@ public class OverviewFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
+
+
+        //Inflate the layout for this fragment
+
+        return inflater.inflate(R.layout.fragment_overview, container, false);
+    }
+
+
+
+    @Override
+    public void onResume(){
+
         parameterList = new ArrayList<String>();
 
         parameterListView = (ListView)getView().findViewById(R.id.parameterListView);
@@ -71,12 +83,6 @@ public class OverviewFragment extends Fragment {
 
         parameterListView.setAdapter(parameterAdapter);
 
-        //Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_overview, container, false);
-    }
-    @Override
-    public void onResume(){
         super.onResume();
     }
 

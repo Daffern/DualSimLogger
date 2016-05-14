@@ -71,14 +71,20 @@ public class DualSimLoggerActivity extends Activity {
         //Log.e(TAG,"hei");
         //Log.e(TAG, MethodReader.getMethods(SignalStrength.class));
 
-        ArrayList list = null;
-        list.add("sdads");
+        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
+            public void uncaughtException(Thread thread, Throwable ex) {
+                ex.printStackTrace();
+            }
+        });
 
         setContentView(R.layout.main_activity);
         //initializeService(); initialized in onResume
 
-        currentFragment = getFragmentManager().findFragmentById(R.id.fragment_place);
+       // currentFragment = getFragmentManager().findFragmentById(R.id.fragment_place);
+
     }
+
 
     public void selectFrag(View view) {
 
