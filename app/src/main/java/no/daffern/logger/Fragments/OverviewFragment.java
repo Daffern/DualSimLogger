@@ -15,13 +15,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Iterator;
 
 import no.daffern.logger.Constants;
 import no.daffern.logger.DualSimLoggerActivity;
@@ -44,9 +48,28 @@ public class OverviewFragment extends Fragment {
     double longitude = 0;
     double altitude = 0;
 
+    ListView parameterListView;
+    ListView sim1ListView;
+    ListView sim2ListView;
+
+    ArrayList<String> parameterList;
+    ArrayAdapter<String> parameterAdapter;
+
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        parameterList = new ArrayList<String>();
+
+        parameterListView = (ListView)getView().findViewById(R.id.parameterListView);
+        sim1ListView = (ListView)getView().findViewById(R.id.sim1ListView);
+        sim2ListView = (ListView)getView().findViewById(R.id.sim2ListView);
+
+
+        parameterAdapter = new ArrayAdapter<String>(this.getActivity(),
+                android.R.layout.simple_list_item_1);
+
+        parameterListView.setAdapter(parameterAdapter);
 
         //Inflate the layout for this fragment
 
@@ -54,43 +77,20 @@ public class OverviewFragment extends Fragment {
     }
     @Override
     public void onResume(){
-
+        super.onResume();
     }
 
-    public void updateText(Message msg) {/*
-        sim1SignalStrength = msg.getData().getInt(Constants.BUNDLE_GSM1);
-        sim1CdmaDbm = msg.getData().getInt(Constants.BUNDLE_CDMA1);
-        sim1EvdoDbm = msg.getData().getInt(Constants.BUNDLE_EVDO1);
-        sim2SignalStrength = msg.getData().getInt(Constants.BUNDLE_GSM2);
-        sim2CdmaDbm = msg.getData().getInt(Constants.BUNDLE_CDMA2);
-        sim2EvdoDbm = msg.getData().getInt(Constants.BUNDLE_EVDO2);
+    public void updateText(Bundle bundle) {
 
-        latitude = msg.getData().getDouble(Constants.BUNDLE_LATITUDE);
-        longitude = msg.getData().getDouble(Constants.BUNDLE_LONGITUDE);
-        altitude = msg.getData().getDouble(Constants.BUNDLE_ALTITUDE);
-
-        TextView latitudeText = (TextView) getView().findViewById(R.id.latitudeText);
-        TextView longitudeText = (TextView) getView().findViewById(R.id.longitudeText);
-        TextView altitudeText = (TextView) getView().findViewById(R.id.altitudeText);
-        latitudeText.setText(Double.toString(latitude));
-        longitudeText.setText(Double.toString(longitude));
-        altitudeText.setText(Double.toString(altitude));
-
-        TextView sim1_signalStrength = (TextView) getView().findViewById(R.id.sim1_signalStrength);
-        TextView sim1_cdmaDbm = (TextView) getView().findViewById(R.id.sim1_cdmaDbm);
-        TextView sim1_evdoDbm = (TextView) getView().findViewById(R.id.sim1_evdoDbm);
+        Iterator<String> iterator = bundle.keySet().iterator();
+        while (iterator.hasNext()){
+            parameterAdapter.add(iterator.next());
+        }
 
 
-        TextView sim2_signalStrength = (TextView) getView().findViewById(R.id.sim2_signalStrength);
-        TextView sim2_cdmaDbm = (TextView) getView().findViewById(R.id.sim2_cdmaDbm);
-        TextView sim2_evdoDbm = (TextView) getView().findViewById(R.id.sim2_evdoDbm);
 
-        sim1_signalStrength.setText(Integer.toString(sim1SignalStrength));
-        sim1_cdmaDbm.setText(Integer.toString(sim1CdmaDbm));
-        sim1_evdoDbm.setText(Integer.toString(sim1EvdoDbm));
 
-        sim2_signalStrength.setText(Integer.toString(sim2SignalStrength));
-        sim2_cdmaDbm.setText(Integer.toString(sim2CdmaDbm));
-        sim2_evdoDbm.setText(Integer.toString(sim2EvdoDbm));*/
+
+
     }
 }

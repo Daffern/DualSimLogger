@@ -8,6 +8,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -32,17 +33,19 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.List;
 
 import dalvik.system.DexFile;
+import no.daffern.logger.Fragments.AboutFragment;
 import no.daffern.logger.Fragments.LoggerFragment;
 import no.daffern.logger.Fragments.OverviewFragment;
 
 
-public class DualSimLoggerActivity extends ActionBarActivity {
+public class DualSimLoggerActivity extends Activity {
 
     private final Messenger mMessenger = new Messenger(new IncomingHandler());
     private Messenger mService = null;
@@ -50,53 +53,60 @@ public class DualSimLoggerActivity extends ActionBarActivity {
 
     private static final String TAG = "DualSimLoggerActivity";
 
-    LoggerFragment loggerFragment;
-    OverviewFragment overviewFragment;
+    Bundle bundleSim1;
+
+    Fragment currentFragment;
+    FragmentState fragmentState = FragmentState.overview;
+    enum FragmentState{
+        overview,
+        logger,
+        about
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Log.e(TAG,"hei");
+        //Log.e(TAG, MethodReader.getMethods(SignalStrength.class));
 
-        Log.e(TAG, MethodReader.getMethods(SignalStrength.class));
-
+        ArrayList list = null;
+        list.add("sdads");
 
         setContentView(R.layout.main_activity);
         //initializeService(); initialized in onResume
 
-        loggerFragment = new LoggerFragment();
-        overviewFragment = new OverviewFragment();
-
+        currentFragment = getFragmentManager().findFragmentById(R.id.fragment_place);
     }
 
     public void selectFrag(View view) {
-        Fragment fr;
 
         switch (view.getId()) {
             default:
-                fr = overviewFragment;
+                currentFragment =  new OverviewFragment();
+                fragmentState = FragmentState.overview;
                 break;
             case R.id.loggerButton:
-                fr = loggerFragment;
+                currentFragment = new LoggerFragment();
+                fragmentState = FragmentState.logger;
+                break;
+            case R.id.aboutButton:
+                currentFragment = new AboutFragment();
+                fragmentState = FragmentState.about;
                 break;
         }
 
 
         FragmentManager fm = getFragmentManager();
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_place, fr);
+        fragmentTransaction.replace(R.id.fragment_place, currentFragment);
         fragmentTransaction.commit();
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
 
-        return true;
-    }
-
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -113,7 +123,7 @@ public class DualSimLoggerActivity extends ActionBarActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 
     private void stopService() {
@@ -183,7 +193,7 @@ public class DualSimLoggerActivity extends ActionBarActivity {
             switch (msg.what) {
 
                 case Constants.MSG_SIGNAL_STRENGTH_CHANGED:
-                    overviewFragment.updateText(msg);
+                    //overviewFragment.updateText(msg);
                     break;
                 case Constants.MSG_START_LOGGER:
                     //loggerFragment.loggerStarted();
@@ -191,6 +201,11 @@ public class DualSimLoggerActivity extends ActionBarActivity {
                 case Constants.MSG_STOP_LOGGER:
                     //loggerFragment.loggerStopped();
                     break;
+                case Constants.MSG_SIGNAL_BUNDLE:
+                    bundleSim1 = msg.getData();
+                    if (fragmentState == FragmentState.overview){
+                        ((OverviewFragment)currentFragment).updateText(bundleSim1);
+                    }
                 default:
                     super.handleMessage(msg);
             }

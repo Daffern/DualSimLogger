@@ -17,8 +17,9 @@
             android:layout_width="0dp"
             android:layout_weight="0.1"
 
-            android:text="Fragment No.1"
-            android:onClick="selectFrag" />
+            android:text="Overview"
+            android:onClick="selectFrag"
+            android:checked="true" />
 
         <Button
             android:id="@+id/loggerButton"
@@ -27,7 +28,8 @@
             android:layout_width="0dp"
             android:layout_weight="0.1"
             android:onClick="selectFrag"
-            android:text="Fragment No.2" />
+            android:text="Logger" />
+
 
         <Button
             android:id="@+id/aboutButton"
@@ -36,9 +38,10 @@
             android:layout_width="0dp"
             android:layout_weight="0.1"
             android:onClick="selectFrag"
-            android:text="Fragment No.2" />
+            android:text="About" />
 
     </LinearLayout>
+
 
 
 

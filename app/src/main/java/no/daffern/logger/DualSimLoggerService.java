@@ -31,6 +31,8 @@ public class DualSimLoggerService extends Service {
 
     PowerManager.WakeLock wakeLock;
 
+
+
     @Override
     public IBinder onBind(Intent intent){
         return messenger.getBinder();

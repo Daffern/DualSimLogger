@@ -11,6 +11,7 @@ public class Constants {
     public static final int MSG_START_LOGGER = 5;
     public static final int MSG_STOP_LOGGER = 6;
     public static final int MSG_MESSAGE = 7;
+    public static final int MSG_SIGNAL_BUNDLE = 8;
 
     public static final String MESSAGE_ERROR="error_message";
 

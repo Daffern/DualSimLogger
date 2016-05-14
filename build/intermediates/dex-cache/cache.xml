@@ -2,165 +2,25 @@
 <items version="2" >
 
     <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.0.0\jars\classes.jar"
+        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="17f8750d5c0749e44dd7c54aa390d9c937803825">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-8c98c0a2e7da7258a3c9154e9661498598bd03c1.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-24bed385b211b82f68611254ecb8c9c4b78d2de8.jar" />
     </item>
     <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.0.0\jars\classes.jar"
+        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="3c0b099f9de16b265ecd6122fcb603e7d0d29f90">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-f7669e87a189e5af265fe5bea54491b44d40fdc0.jar" />
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-bf1417bf5b2dccf62ef6de165595431f7d04354a.jar" />
     </item>
     <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.0.0\jars\classes.jar"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="9224bc4c54ba95147c7eabd874573763c07cb6be">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-8571aba5fe368577f0917ecce9d79ac92535394b.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c976518693e89ad44fbfccfc654941eaec198d08">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-c4fde38b8595e7b5946e8f05718ab413ee6a96b3.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e3d791b42eaa90416cd0b2d2e608092794a3baa4">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-df4b40fa2dcae1ebde2dbde5ff1110ab04364a6a.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3033cc3a2c68dff3e5b646d6d084bdbdf7d00b25">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-625f5206e667ae93acf4f83f9b4647a807ae7604.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="41b3870cbe5fa546d8095b5b89d42cb69f3dd175">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-e0b5b2d6df9c1573330b0852fb3d7418adfb521e.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-e95dfe23fae72474ab99697762c1292e3c21e72c.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a96b762bde4139de855735f175ec4d17dca55a6d">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-c0035f53c4ca665d1aa003d5c50288848def5235.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4c93d99d454c975536bbe3b42283eee847f03ea3">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-2acd18ff09acdb9d816352b55523143b820bf4d8.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-5ed3964055975e5030faf437381d2ca931ec9eb9.jar" />
-    </item>
-    <item
-        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-9c7f0f00a3d76e88d03ff501363eae75a59facb5.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4cd0b093824b3228fffc21ea369b98d0b1db6566">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-60cadf651f20c63f840983bfe19afa8efa349a6f.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="73ccb92b70112f2e463e415ef8d7275de7da6516">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-29b1bf59ad4005d98193cb30ed2c0859c1dab641.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="055783146ba9654a725442563be78cad303aad1f">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-44e1ef42dd0ddefae77b5f683d7dc77c9dd9939a.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ef5f051e7308febe289dc93c67c5f32785b4260a">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-2d4de4b4f4c763d27098fe01ef697a1600558568.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="29fd6d3794b71491c2789708cd8d03c71feb8954">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-b09160b80b8c8dfa554888dc34a28c7775404282.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="fb04b12526b0073c7fb1ebb70c5842d82ee95596">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-7844148f619770f8213eae9c35d08368fd55de7e.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0e8228b4bc69c6a2c8d7c18498a77e53417d2574">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-4f2313c3796cb3399218b1a2c64f2efd09a38afa.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a08d65794b844d8e7540bf9a33859bf3b2482d7f">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-ddf99cd285de90ffa5a1b8fadf8247e38fb80a3f.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1c5a76debf0c2857ccad422c4a80ed785982f8df">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-0ac96dd8215fe408f2726cc8d74146d1b8448249.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-6dc46971af032c69ca8587642226027e49556554.jar" />
-    </item>
-    <item
-        jar="D:\Android\Projects\Logger\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7ff613bf78ab057293892fdbd4169eda899c89b9">
-        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\classes-6db9da7ce1707165a97cc48b80b53555b7db1dd8.jar" />
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="D:\Android\Projects\Logger\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-aa16b3cf885393ef74ba8407c65bcf20627dd05b.jar" />
     </item>
 
 </items>

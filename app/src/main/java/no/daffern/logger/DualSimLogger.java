@@ -20,6 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import no.daffern.logger.DeviceSpecific.DualSimHelper;
@@ -60,10 +61,20 @@ public class DualSimLogger implements LocationListener {
 
     private Location location;
 
+    Bundle bundleSim1;
+    Bundle bundleSim2;
+
+    ArrayList<Method> getterMethods;
+    ArrayList<String> methodNames;
 
     public DualSimLogger(DualSimLoggerService dualSimLoggerService) {
         this.dualSimLoggerService = dualSimLoggerService;
 
+        bundleSim1 = new Bundle();
+        bundleSim2 = new Bundle();
+
+        getterMethods = new ArrayList<Method>();
+        methodNames = new ArrayList<String>();
 
         String model = Build.MODEL;
 
@@ -80,8 +91,24 @@ public class DualSimLogger implements LocationListener {
         if (!folder.exists())
             folder.mkdir();
 
+
+
+        initGetterMethods();
+
         startListening();
         startCheckingLocation();
+    }
+    private void initGetterMethods(){
+        Method[] methods = SignalStrength.class.getDeclaredMethods();
+
+        for (Method method : methods){
+            if (method.getName().startsWith("get")){
+                getterMethods.add(method);
+                methodNames.add(method.getName().substring(3));
+            }
+        }
+
+
     }
 
     public void startCheckingLocation() {
@@ -167,6 +194,7 @@ public class DualSimLogger implements LocationListener {
     }
 
     public void sendSignalStrengthUpdateToUi() {
+
         Bundle bundle = new Bundle();
         bundle.putInt(Constants.BUNDLE_GSM1, sim1SignalStrength);
         bundle.putInt(Constants.BUNDLE_CDMA1, sim1CdmaDbm);
@@ -180,7 +208,10 @@ public class DualSimLogger implements LocationListener {
             bundle.putDouble(Constants.BUNDLE_LONGITUDE, location.getLongitude());
             bundle.putDouble(Constants.BUNDLE_ALTITUDE, location.getAltitude());
         }
-        dualSimLoggerService.sendMessageToUI(Constants.MSG_SIGNAL_STRENGTH_CHANGED, bundle);
+
+        dualSimLoggerService.sendMessageToUI(Constants.MSG_SIGNAL_BUNDLE, bundleSim1);
+
+        //dualSimLoggerService.sendMessageToUI(Constants.MSG_SIGNAL_STRENGTH_CHANGED, bundle);
     }
 
     public void stopLogging() {
@@ -206,9 +237,23 @@ public class DualSimLogger implements LocationListener {
         public void onSignalStrengthsChanged(SignalStrength signalStrength) {
 
 
+            for (int i = 0 ; i < getterMethods.size() ; i++){
+                try {
+                    int value = (int)getterMethods.get(i).invoke(signalStrength);
+                    bundleSim1.putInt(methodNames.get(i), value);
+
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
 
             sim1SignalStrength = signalStrength.getGsmSignalStrength();
-
             try {
                 Method GetLevel = SignalStrength.class.getDeclaredMethod("getDbm");
                 sim1SignalStrength = (int) GetLevel.invoke(signalStrength);
